@@ -1,0 +1,23 @@
+.PHONY: all debug
+
+OCAMLINCLUDES[] += ../gtp \
+	../board \
+	../sgf \
+	../test
+
+OCAML_LIBS[] +=	../gtp/libgtp \
+	../board/libboard \
+	../sgf/libsgf \
+	../patterns/libpatterns \
+	../test/libtest
+
+OCAML_OTHER_LIBS[] +=
+	str
+	oUnit/oUnit
+
+OCamlProgram(ergo, main)
+
+clean:
+	rm -f \
+	ergo.run ergo.opt main.cmi main.cmx main.o main.cmo \
+	OMakefile.omc

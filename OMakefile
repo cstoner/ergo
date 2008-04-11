@@ -1,0 +1,22 @@
+.PHONY: all install tests debug
+
+USE_OCAMLFIND = true
+
+OCAMLPACKS[] =
+	str
+	oUnit
+
+NATIVE_ENABLED = true
+BYTE_ENABLED = true
+
+OCAMLCFLAGS += -g
+
+.DEFAULT: $(if $(BYTE_ENABLED), src/main/ergo.run) \
+          $(if $(NATIVE_ENABLED), src/main/ergo.opt)
+	cp src/main/ergo.* ./
+
+.SUBDIRS: src
+
+clean:
+	rm -f \
+	mytop ergo.run ergo.opt OMakefile.omc OMakeroot.omc .omakedb .omakedb.lock

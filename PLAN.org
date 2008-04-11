@@ -1,0 +1,22 @@
+Ergo Go Artificial Intellegence
+*Board Library
+** Nearly every other module will depend on this library
+** Keeps the game record of one board
+*SGF Support
+*GTP Support
+*Pattern Matching
+** board -> regex_string function
+*** Will allow me to translate a pattern into a string for regex
+*** Will be used by the patt_gen.ml file to autogenerate code in a consistant way
+** patt_gen.ml
+*** Transforms a text file of go patterns into usable ocaml code
+*** <filename>.db turns into a patt_match_<filename> function from pos->bool
+*** Will serve many purposes throughout the rest of the codebase
+*Game Engine
+** Move reading
+** Tesuji
+** Fuseki
+** Joseki
+** Life and Death
+** Semeai
+*Score Estimation

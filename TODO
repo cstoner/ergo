@@ -1,0 +1,10 @@
+There is a really cool debug mode for Oz that I have bookmarked in Firefox
+It would be awesome to write a .emacsrc file that does the same thing for ocaml
+as well as some handy hooks for inserting and navigating test cases
+
+I should write the basics of a score estimator (With apropriate gtp hooks in place)
+
+I should refactor the existing code that I have and finish the test module.
+
+I'm damn near GTP Compliant.
+All I need is genmove. Maybe I'll make idiot_bot just to get a GUI...

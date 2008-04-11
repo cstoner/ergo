@@ -1,0 +1,26 @@
+.PHONY: all install
+
+OCAMLOPTFLAGS += -inline 10
+
+OCAMLINCLUDES[] += ../gtp \
+	../board \
+	../sgf \
+	../patterns
+
+OCAML_LIBS[] += ../gtp/libgtp \
+	../board/libboard \
+	../sgf/libsgf \
+	../patterns/libpatterns
+
+OCAML_OTHER_LIBS[] += str list oUnit/oUnit
+
+OCamlLibrary(libtest, test)
+
+all: ../board/libboard.o ../sgf/libsgf.o ../patterns/libpatterns.o ../gtp/libgtp.o libtest.o
+
+debug: ../board/libboard.cmo ../sgf/libsgf.cmo ../patterns/libpatterns.cmo ../gtp/libgtp.cmo libtest.cmo
+
+clean:
+	rm -f \
+	*.a *.cm* *.o \
+	OMakefile.omc

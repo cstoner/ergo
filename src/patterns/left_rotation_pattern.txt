@@ -1,0 +1,30 @@
+rotate left ->
+	0st -> 3th (ring_end_on - ring_dist) (r_d = 1)
+	1nd -> 0st (curr - ring_dist)
+	2rd -> 1nd (curr - ring_dist)
+	3th -> 2rd (curr - ring_dist)
+	4th -> 10th (ring_end_on - ring_dist) (r_d = 2)
+	5th -> 11th (ring_end_on - ring_dist + 1)
+	6th -> 4th (curr - ring_dist)
+	7th -> 5th (curr - ring_dist)
+	8th -> 6th (curr - ring_dist)
+        9th -> 7th (curr - ring_dist)
+       10th -> 8th (curr - ring_dist)
+       11th -> 9th (curr - ring_dist)
+       12th -> 21nd (ring_end_on - ring_dist) (r_d = 3)
+       13th -> 22rd (ring_end_on - ring_dist +1)
+       14th -> 23th (ring_end_on - ring_dist +2)
+       15th -> 12th (curr - ring_dist)
+       16th -> 13th (curr - ring_dist)
+       17th -> 14th (curr - ring_dist)
+       18th -> 15th (curr - ring_dist)
+       19th -> 16th (curr - ring_dist)
+       20th -> 17th (curr - ring_dist)
+       21th -> 18th (curr - ring_dist)
+       22th -> 19th (curr - ring_dist)
+       23th -> 20st (curr - ring_dist)
+       24th -> (PATTERN CONTINUES FROM HERE
+       25th ->
+       26th ->
+       27th ->
+       29

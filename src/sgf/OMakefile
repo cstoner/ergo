@@ -1,0 +1,27 @@
+.PHONY: all install
+DEFAULT: all
+
+OCAMLOPTFLAGS += -inline 10
+
+OCAMLINCLUDES += ../board 
+OCAML_LIBS += ../board/libboard
+
+OCamlGeneratedFiles(lexer.ml sgfParser.ml sgfParser.mli)
+
+OCamlLibrary(libsgf, sgf sgfLexer sgfParser sgfUtil)
+
+all: libsgf.o
+debug: libsgf.cmo
+
+clean:
+	rm -f \
+	sgfLexer.ml \
+	sgfParser.ml sgfParser.mli \
+	*.cmi \
+	*.cmx \
+	*.a \
+	*.cmxa \
+	*.o \
+	*.cm* \
+	*~ \
+	OMakefile.omc

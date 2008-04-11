@@ -1,0 +1,10 @@
+.PHONY: all install debug
+
+OCAML_OTHER_LIBS[] += str list
+
+OCamlLibrary(libgtp, gtp)
+
+clean:
+	rm -f \
+	gtp.cmi gtp.cmx gtp.o libgtp.a libgtp.cmxa \
+	OMakefile.omc gtp.cmo libgtp.cma libgtp.cmo

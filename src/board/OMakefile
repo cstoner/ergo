@@ -1,0 +1,19 @@
+.PHONY: all debug
+
+OCAMLOPTFLAGS += -inline 10
+
+OCAML_LIBS[] +=
+	../gtp/libgtp
+
+OCAML_OTHER_LIBS[] += 
+	str
+	oUnit/oUnit
+
+OCamlLibrary(libboard, board hash)
+
+clean:
+	rm -f \
+	board.cmi board.cmx board.o board.cmo libboard.a libboard.cmxa libboard.cma \
+	hash.cmi hash.cmx hash.o hash.cmo OMakefile.omc \
+	*~
+

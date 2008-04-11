@@ -1,0 +1,5 @@
+Current build dependencies:
+ocaml, omake, libounit-ocaml-dev, ocaml-findlib
+
+Build instructions:
+$ omake

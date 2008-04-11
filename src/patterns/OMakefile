@@ -1,0 +1,18 @@
+.PHONY: insall tests all debug
+
+OCAMLINCLUDES[] += ../test \
+	../board
+
+OCAML_LIBS[] +=	../test/libtest \
+	../board/libboard
+
+OCAML_OTHER_LIBS[] +=
+	str
+	oUnit/oUnit
+
+OCamlLibrary(libpatterns, patterns)
+
+clean:
+	rm -f \
+	*.a *.cm* *.o *~ \
+	OMakefile.omc

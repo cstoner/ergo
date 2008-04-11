@@ -1,0 +1,6 @@
+.PHONY: all install clean debug
+
+.SUBDIRS: gtp main board sgf patterns test
+
+clean:
+	rm -f OMakefile.omc

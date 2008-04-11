@@ -3,3 +3,7 @@ ocaml, omake, libounit-ocaml-dev, ocaml-findlib
 
 Build instructions:
 $ omake
+
+Running unit tests:
+$ omake -all_tests          -- Run every known test suite
+$ omake -test <SUITE_NAME>  -- Run only the tests in test suite <SUITE_NAME>
